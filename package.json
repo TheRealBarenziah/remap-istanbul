@@ -28,7 +28,8 @@
   },
   "scripts": {
     "lint": "eslint ./lib/",
-    "test": "rimraf ./tmp && npx intern config=tests/intern.json"
+    "test": "rimraf ./tmp && npx intern config=tests/intern.json",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies-comment": {
     "source-map": "0.7+ releases introduce breaking changes"
@@ -48,5 +49,8 @@
     "gulp": "^4.0.0",
     "intern": "^4.9.1",
     "rimraf": "^2.6.2"
+  },
+  "resolutions": {
+    "async": "2.6.4"
   }
 }
